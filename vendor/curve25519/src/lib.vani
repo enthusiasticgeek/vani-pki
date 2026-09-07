@@ -706,6 +706,44 @@ fn ed25519_zero64_bytes() -> [u8; 64] {
     0 as u8, 0 as u8, 0 as u8, 0 as u8, 0 as u8, 0 as u8, 0 as u8, 0 as u8
   ];
 }
+fn ed25519_zero512_bytes() -> [u8; 512] {
+  let a: [u8; 256] = ed25519_zero256_bytes();
+  let out: [u8; 512] = [
+    a[0], a[1], a[2], a[3], a[4], a[5], a[6], a[7], a[8], a[9], a[10], a[11], a[12], a[13], a[14], a[15],
+    a[16], a[17], a[18], a[19], a[20], a[21], a[22], a[23], a[24], a[25], a[26], a[27], a[28], a[29], a[30], a[31],
+    a[32], a[33], a[34], a[35], a[36], a[37], a[38], a[39], a[40], a[41], a[42], a[43], a[44], a[45], a[46], a[47],
+    a[48], a[49], a[50], a[51], a[52], a[53], a[54], a[55], a[56], a[57], a[58], a[59], a[60], a[61], a[62], a[63],
+    a[64], a[65], a[66], a[67], a[68], a[69], a[70], a[71], a[72], a[73], a[74], a[75], a[76], a[77], a[78], a[79],
+    a[80], a[81], a[82], a[83], a[84], a[85], a[86], a[87], a[88], a[89], a[90], a[91], a[92], a[93], a[94], a[95],
+    a[96], a[97], a[98], a[99], a[100], a[101], a[102], a[103], a[104], a[105], a[106], a[107], a[108], a[109], a[110], a[111],
+    a[112], a[113], a[114], a[115], a[116], a[117], a[118], a[119], a[120], a[121], a[122], a[123], a[124], a[125], a[126], a[127],
+    a[128], a[129], a[130], a[131], a[132], a[133], a[134], a[135], a[136], a[137], a[138], a[139], a[140], a[141], a[142], a[143],
+    a[144], a[145], a[146], a[147], a[148], a[149], a[150], a[151], a[152], a[153], a[154], a[155], a[156], a[157], a[158], a[159],
+    a[160], a[161], a[162], a[163], a[164], a[165], a[166], a[167], a[168], a[169], a[170], a[171], a[172], a[173], a[174], a[175],
+    a[176], a[177], a[178], a[179], a[180], a[181], a[182], a[183], a[184], a[185], a[186], a[187], a[188], a[189], a[190], a[191],
+    a[192], a[193], a[194], a[195], a[196], a[197], a[198], a[199], a[200], a[201], a[202], a[203], a[204], a[205], a[206], a[207],
+    a[208], a[209], a[210], a[211], a[212], a[213], a[214], a[215], a[216], a[217], a[218], a[219], a[220], a[221], a[222], a[223],
+    a[224], a[225], a[226], a[227], a[228], a[229], a[230], a[231], a[232], a[233], a[234], a[235], a[236], a[237], a[238], a[239],
+    a[240], a[241], a[242], a[243], a[244], a[245], a[246], a[247], a[248], a[249], a[250], a[251], a[252], a[253], a[254], a[255],
+    a[0], a[1], a[2], a[3], a[4], a[5], a[6], a[7], a[8], a[9], a[10], a[11], a[12], a[13], a[14], a[15],
+    a[16], a[17], a[18], a[19], a[20], a[21], a[22], a[23], a[24], a[25], a[26], a[27], a[28], a[29], a[30], a[31],
+    a[32], a[33], a[34], a[35], a[36], a[37], a[38], a[39], a[40], a[41], a[42], a[43], a[44], a[45], a[46], a[47],
+    a[48], a[49], a[50], a[51], a[52], a[53], a[54], a[55], a[56], a[57], a[58], a[59], a[60], a[61], a[62], a[63],
+    a[64], a[65], a[66], a[67], a[68], a[69], a[70], a[71], a[72], a[73], a[74], a[75], a[76], a[77], a[78], a[79],
+    a[80], a[81], a[82], a[83], a[84], a[85], a[86], a[87], a[88], a[89], a[90], a[91], a[92], a[93], a[94], a[95],
+    a[96], a[97], a[98], a[99], a[100], a[101], a[102], a[103], a[104], a[105], a[106], a[107], a[108], a[109], a[110], a[111],
+    a[112], a[113], a[114], a[115], a[116], a[117], a[118], a[119], a[120], a[121], a[122], a[123], a[124], a[125], a[126], a[127],
+    a[128], a[129], a[130], a[131], a[132], a[133], a[134], a[135], a[136], a[137], a[138], a[139], a[140], a[141], a[142], a[143],
+    a[144], a[145], a[146], a[147], a[148], a[149], a[150], a[151], a[152], a[153], a[154], a[155], a[156], a[157], a[158], a[159],
+    a[160], a[161], a[162], a[163], a[164], a[165], a[166], a[167], a[168], a[169], a[170], a[171], a[172], a[173], a[174], a[175],
+    a[176], a[177], a[178], a[179], a[180], a[181], a[182], a[183], a[184], a[185], a[186], a[187], a[188], a[189], a[190], a[191],
+    a[192], a[193], a[194], a[195], a[196], a[197], a[198], a[199], a[200], a[201], a[202], a[203], a[204], a[205], a[206], a[207],
+    a[208], a[209], a[210], a[211], a[212], a[213], a[214], a[215], a[216], a[217], a[218], a[219], a[220], a[221], a[222], a[223],
+    a[224], a[225], a[226], a[227], a[228], a[229], a[230], a[231], a[232], a[233], a[234], a[235], a[236], a[237], a[238], a[239],
+    a[240], a[241], a[242], a[243], a[244], a[245], a[246], a[247], a[248], a[249], a[250], a[251], a[252], a[253], a[254], a[255]
+  ];
+  return out;
+}
 fn ed25519_zero256_bytes() -> [u8; 256] {
   let a: [u8; 64] = ed25519_zero64_bytes();
   let out: [u8; 256] = [
@@ -1011,8 +1049,19 @@ fn ed25519_secret_expand(secret: ref [u8; 32]) -> Ed25519ExpandResult {
     scratch[i] = secret[i];
     i = i + 1;
   }
-  let hash_out: [u8; 64] = ed25519_zero64_bytes();
-  let _ = sha512_hash(mut ref scratch, 32, mut ref hash_out);
+  // Streaming SHA-512 (init/update/finalize), not the one-shot
+  // sha512_hash -- this is curve25519's ONLY remaining use of
+  // crypto_hash beyond the streaming primitives, and removing it
+  // means curve25519 depends only on crypto_hash's core.vani (the
+  // primitives-only file), not its full lib.vani (one-shot wrappers +
+  // self-tests). That matters for any consumer with a pre-existing
+  // function literally named sha256_hash/sha512_hash/etc of its own
+  // (e.g. DhruvaOS's Pi 1 kernel, which defines its own adapter of
+  // that exact name) -- see crypto_hash's own core.vani header
+  // comment for the full BUG-234 story this avoids.
+  let sctx: Sha512Ctx = sha512_init();
+  let sctx2: Sha512Ctx = sha512_update(ref sctx, mut ref scratch, 32);
+  let hash_out: [u8; 64] = sha512_finalize(ref sctx2);
 
   let a_bytes: [u8; 32] = ed25519_zero32_bytes();
   let j: i64 = 0;
@@ -1042,32 +1091,68 @@ fn ed25519_secret_to_public(secret: ref [u8; 32]) -> [u8; 32] {
   return ed25519_point_compress(ref apoint);
 }
 
+// out = H(block1 (32 bytes) || block2 (32 bytes, only if
+// `has_block2` == 1) || msg (`msg_len` bytes)), computed via
+// streaming SHA-512 (no fixed total-length cap -- see this section's
+// own note on why `ed25519_sign`/`ed25519_verify` moved off the
+// one-shot `sha512_hash` they originally used: real callers (TLS
+// 1.3's own CertificateVerify signed-content construction, ~130
+// bytes) exceed a small one-shot buffer's practical cap). Covers
+// both of RFC 8032's own two hash shapes: prefix||msg
+// (`has_block2`=0, `ed25519_sign`'s own r) and R||A||msg
+// (`has_block2`=1, both sign's own k and verify's own k).
+fn ed25519_hash_2block_msg(block1: ref [u8; 32], block2: ref [u8; 32], has_block2: i64, msg: ref [u8; 512], msg_len: i64) -> [u8; 64] {
+  let ctx: Sha512Ctx = sha512_init();
+  let chunk1: [u8; 256] = ed25519_zero256_bytes();
+  let ci: i64 = 0;
+  while ci < 32 {
+    chunk1[ci] = block1[ci];
+    ci = ci + 1;
+  }
+  let prefix_len: i64 = 32;
+  if has_block2 == 1 {
+    let cj: i64 = 0;
+    while cj < 32 {
+      chunk1[32 + cj] = block2[cj];
+      cj = cj + 1;
+    }
+    prefix_len = 64;
+  }
+  let ctx2: Sha512Ctx = sha512_update(ref ctx, mut ref chunk1, prefix_len);
+
+  let offset: i64 = 0;
+  let ctx3: Sha512Ctx = ctx2;
+  while offset < msg_len {
+    let remaining: i64 = msg_len - offset;
+    let n: i64 = if remaining < 256 { remaining } else { 256 };
+    let chunk: [u8; 256] = ed25519_zero256_bytes();
+    let mi: i64 = 0;
+    while mi < n {
+      chunk[mi] = msg[offset + mi];
+      mi = mi + 1;
+    }
+    ctx3 = sha512_update(ref ctx3, mut ref chunk, n);
+    offset = offset + n;
+  }
+  return sha512_finalize(ref ctx3);
+}
+
 // RFC 8032 section 5.1.6. `out_sig` is 64 bytes (R || s). `msg` is
-// capped at 64 bytes in v0.1.0 -- comfortably fits both hash inputs
-// (prefix||msg and R||A||msg, at most 128 bytes total) inside
-// crypto_hash's sha512_hash 256-byte scratch. A consumer signing
-// longer messages needs its own pre-hash step (hash the real message
-// first, sign the digest) rather than passing it here directly.
-fn ed25519_sign(secret: ref [u8; 32], msg: ref [u8; 64], msg_len: i64) -> [u8; 64] {
+// capped at 512 bytes (comfortable headroom over TLS 1.3's own
+// CertificateVerify signed-content, ~130 bytes) -- hashing itself has
+// no length cap at all (see `ed25519_hash_prefix_b_msg` above), so
+// this bound is purely "how big a single stack array to reserve," not
+// an algorithmic limit. A consumer signing something larger needs its
+// own pre-hash step (hash the real message first, sign the digest).
+fn ed25519_sign(secret: ref [u8; 32], msg: ref [u8; 512], msg_len: i64) -> [u8; 64] {
   let expanded: Ed25519ExpandResult = ed25519_secret_expand(secret);
   let g: Ed25519Point = ed25519_base_point();
   let apoint: Ed25519Point = ed25519_point_mul(ref expanded.a, ref g);
   let apub: [u8; 32] = ed25519_point_compress(ref apoint);
 
   // r = H(prefix || msg) mod L
-  let hash_input1: [u8; 256] = ed25519_zero256_bytes();
-  let hi: i64 = 0;
-  while hi < 32 {
-    hash_input1[hi] = expanded.prefix[hi];
-    hi = hi + 1;
-  }
-  let hj: i64 = 0;
-  while hj < msg_len {
-    hash_input1[32 + hj] = msg[hj];
-    hj = hj + 1;
-  }
-  let hash_out1: [u8; 64] = ed25519_zero64_bytes();
-  let _ = sha512_hash(mut ref hash_input1, 32 + msg_len, mut ref hash_out1);
+  let unused_block2: [u8; 32] = ed25519_zero32_bytes();
+  let hash_out1: [u8; 64] = ed25519_hash_2block_msg(ref expanded.prefix, ref unused_block2, 0, msg, msg_len);
   let hash_out1_limbs: [u32; 16] = bytes64_to_limbs16_le(ref hash_out1);
   let r: [u32; 8] = ed25519_scalar_mod_l(ref hash_out1_limbs);
 
@@ -1075,24 +1160,7 @@ fn ed25519_sign(secret: ref [u8; 32], msg: ref [u8; 64], msg_len: i64) -> [u8; 6
   let rs: [u8; 32] = ed25519_point_compress(ref rpoint);
 
   // k = H(R || A || msg) mod L
-  let hash_input2: [u8; 256] = ed25519_zero256_bytes();
-  let hi2: i64 = 0;
-  while hi2 < 32 {
-    hash_input2[hi2] = rs[hi2];
-    hi2 = hi2 + 1;
-  }
-  let hi3: i64 = 0;
-  while hi3 < 32 {
-    hash_input2[32 + hi3] = apub[hi3];
-    hi3 = hi3 + 1;
-  }
-  let hi4: i64 = 0;
-  while hi4 < msg_len {
-    hash_input2[64 + hi4] = msg[hi4];
-    hi4 = hi4 + 1;
-  }
-  let hash_out2: [u8; 64] = ed25519_zero64_bytes();
-  let _ = sha512_hash(mut ref hash_input2, 64 + msg_len, mut ref hash_out2);
+  let hash_out2: [u8; 64] = ed25519_hash_2block_msg(ref rs, ref apub, 1, msg, msg_len);
   let hash_out2_limbs: [u32; 16] = bytes64_to_limbs16_le(ref hash_out2);
   let k: [u32; 8] = ed25519_scalar_mod_l(ref hash_out2_limbs);
 
@@ -1119,7 +1187,7 @@ fn ed25519_sign(secret: ref [u8; 32], msg: ref [u8; 64], msg_len: i64) -> [u8; 6
 // covers every rejection path explicitly (malformed public key,
 // malformed R, s >= L) rather than letting any fall through to an
 // ambiguous result.
-fn ed25519_verify(pubkey: ref [u8; 32], msg: ref [u8; 64], msg_len: i64, sig: ref [u8; 64]) -> i64 {
+fn ed25519_verify(pubkey: ref [u8; 32], msg: ref [u8; 512], msg_len: i64, sig: ref [u8; 64]) -> i64 {
   let dec_a: Ed25519DecompressResult = ed25519_point_decompress(pubkey);
   if dec_a.ok == 0 {
     return 0;
@@ -1150,24 +1218,7 @@ fn ed25519_verify(pubkey: ref [u8; 32], msg: ref [u8; 64], msg_len: i64, sig: re
     return 0;
   }
 
-  let hash_input: [u8; 256] = ed25519_zero256_bytes();
-  let hi: i64 = 0;
-  while hi < 32 {
-    hash_input[hi] = rs[hi];
-    hi = hi + 1;
-  }
-  let hj: i64 = 0;
-  while hj < 32 {
-    hash_input[32 + hj] = pubkey[hj];
-    hj = hj + 1;
-  }
-  let hk: i64 = 0;
-  while hk < msg_len {
-    hash_input[64 + hk] = msg[hk];
-    hk = hk + 1;
-  }
-  let hash_out: [u8; 64] = ed25519_zero64_bytes();
-  let _ = sha512_hash(mut ref hash_input, 64 + msg_len, mut ref hash_out);
+  let hash_out: [u8; 64] = ed25519_hash_2block_msg(ref rs, pubkey, 1, msg, msg_len);
   let hash_out_limbs: [u32; 16] = bytes64_to_limbs16_le(ref hash_out);
   let k: [u32; 8] = ed25519_scalar_mod_l(ref hash_out_limbs);
 
@@ -1199,7 +1250,7 @@ fn ed25519_self_test() -> i64 {
 
   let msg_str: Str = "Dhruva Ed25519 test message";
   let msg_len: i64 = str_len_bytes(msg_str);
-  let msg: [u8; 64] = ed25519_zero64_bytes();
+  let msg: [u8; 512] = ed25519_zero512_bytes();
   let mi: i64 = 0;
   while mi < msg_len {
     msg[mi] = str_byte_at(msg_str, mi) as u8;
@@ -1248,7 +1299,7 @@ fn ed25519_self_test() -> i64 {
     ok = 0;
   }
 
-  let bad_msg: [u8; 64] = ed25519_zero64_bytes();
+  let bad_msg: [u8; 512] = ed25519_zero512_bytes();
   let ci: i64 = 0;
   while ci < msg_len {
     bad_msg[ci] = msg[ci];
@@ -1256,6 +1307,38 @@ fn ed25519_self_test() -> i64 {
   }
   bad_msg[0] = ((bad_msg[0] as u32) ^ (1 as u32)) as u8;
   if ed25519_verify(ref pub_out, ref bad_msg, msg_len, ref sig_out) == 1 {
+    ok = 0;
+  }
+
+  // A 130-byte message (over the OLD 64-byte cap this API had before
+  // moving to streaming SHA-512 internally -- see ed25519_hash_2block
+  // _msg's own header comment) -- proves the real motivating case
+  // (TLS 1.3's own CertificateVerify signed-content, ~130 bytes)
+  // works, not just that small messages still do. Same seed as above
+  // (so the expected pubkey is already verified); message and
+  // signature independently generated via the real `cryptography`
+  // Python library, not derived from this same vani code.
+  let big_msg: [u8; 512] = ed25519_zero512_bytes();
+  let bmi: i64 = 0;
+  while bmi < 130 {
+    big_msg[bmi] = (((bmi * 7 + 3) as u32) & (255 as u32)) as u8;
+    bmi = bmi + 1;
+  }
+  let big_sig: [u8; 64] = ed25519_sign(ref seed, ref big_msg, 130);
+  let expected_big_sig: [u8; 64] = [
+    0x7d as u8, 0xe1 as u8, 0x57 as u8, 0x85 as u8, 0x78 as u8, 0x88 as u8, 0x38 as u8, 0x6f as u8,
+    0x02 as u8, 0x43 as u8, 0xfe as u8, 0x47 as u8, 0xaa as u8, 0xef as u8, 0x5b as u8, 0xdb as u8,
+    0x6a as u8, 0x39 as u8, 0xef as u8, 0x07 as u8, 0xc5 as u8, 0x32 as u8, 0xe5 as u8, 0x5e as u8,
+    0x5b as u8, 0x23 as u8, 0xda as u8, 0xdf as u8, 0xa0 as u8, 0x71 as u8, 0xb0 as u8, 0xf3 as u8,
+    0xfc as u8, 0x90 as u8, 0xe4 as u8, 0xa5 as u8, 0x22 as u8, 0xa4 as u8, 0xd9 as u8, 0x5e as u8,
+    0xd4 as u8, 0x89 as u8, 0xf4 as u8, 0x5d as u8, 0x1a as u8, 0x3c as u8, 0xc6 as u8, 0x5e as u8,
+    0xcd as u8, 0x9c as u8, 0x3b as u8, 0x26 as u8, 0xec as u8, 0x17 as u8, 0x02 as u8, 0x54 as u8,
+    0xe1 as u8, 0xca as u8, 0xe5 as u8, 0x57 as u8, 0xe6 as u8, 0xb3 as u8, 0x30 as u8, 0x05 as u8
+  ];
+  if sha512_digest_equal(ref big_sig, ref expected_big_sig) == 0 {
+    ok = 0;
+  }
+  if ed25519_verify(ref pub_out, ref big_msg, 130, ref big_sig) == 0 {
     ok = 0;
   }
 

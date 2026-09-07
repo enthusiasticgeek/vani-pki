@@ -1,10 +1,10 @@
 [package]
 name        = "pki"
-version     = "0.1.0"
+version     = "0.2.0"
 entry       = "src/lib.vani"
 authors     = "enthusiasticgeek"
 license     = "Apache-2.0"
-description = "Raw public-key trust (no X.509/CA chain, a compile-time-pinned key never runtime-settable), pure vani, hardware-agnostic and heap-free. Extracted from DhruvaOS's Pi 4/5 port so any consumer can share one implementation."
+description = "Raw public-key trust (no X.509/CA chain, a compile-time-pinned key never runtime-settable), pure vani, hardware-agnostic and heap-free. data cap raised to 512 bytes (matches curve25519 v0.2.0). Extracted from DhruvaOS's Pi 4/5 port so any consumer can share one implementation."
 registry    = "kosh"
 
 [deps]
