@@ -34,6 +34,8 @@ use "../vendor/curve25519/src/lib.vani";
 // same genuine-signature-verifies and tampered-content-rejected
 // checks, minus the file-based end-to-end leg DharaFS would require.
 
+#[bounded_stack(bytes=64)]
+#[wcet(cycles=70)]
 fn pki_pinned_key() -> [u8; 32] {
   return [
     0xe7 as u8, 0x34 as u8, 0xea as u8, 0x6c as u8, 0x2b as u8, 0x62 as u8, 0x57 as u8, 0xde as u8,
@@ -43,11 +45,13 @@ fn pki_pinned_key() -> [u8; 32] {
   ];
 }
 
+#[bounded_stack(bytes=5680)]
 fn pki_verify_raw(data: ref [u8; 512], data_len: i64, sig: ref [u8; 64]) -> i64 {
   let key: [u8; 32] = pki_pinned_key();
   return ed25519_verify(ref key, data, data_len, sig);
 }
 
+#[bounded_stack(bytes=6880)]
 fn pki_self_test() -> i64 {
   let ok: i64 = 1;
 
